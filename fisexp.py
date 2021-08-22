@@ -1,6 +1,8 @@
-test = int(input('\nO que você quer testar?\nValores Estatísticos (1)\nCompatibilidade (2)\n'))
+frase_para_input = '\nO que você quer testar?\nValores Estatísticos (1)\nDiscrepância Relativa (2)\nCompatibilidade (3)\n'
 
-if test not in [1, 2]:
+test = int(input(frase_para_input))
+
+if test not in [1, 2, 3]:
     test = int(input('Por favor, insira um valor válido para que eu faça a minha mágica\n'))
 
 if test == 1:
@@ -44,6 +46,13 @@ if test == 1:
     print("Desvio Padrão: ", r_desvPad)
     print("Erro: ", r_error, "\n")
 elif test == 2:
+    # Pede pelos valores
+    x = float(input('\nValor: '))
+    y = float(input('Sua discrepância: '))
+
+    print('Discrepância Relativa:', y / x)
+
+elif test == 3:
     
     # Pede pelos valores e suas respectivas discrepâncias
     x1 = float(input('\nValor 1: '))
