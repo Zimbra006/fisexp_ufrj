@@ -7,19 +7,8 @@ if test not in [1, 2, 3]:
 
 if test == 1:
     # Lista que vai armazenar os valores medidos
-    x = eval(input('\nValores:'))
-
-    def removeIndex():
-        allClear = False
-        while not allClear:
-            for i in range(len(x)):
-                if type(x[i]) == type(int()):
-                    x.remove(x[i])
-                    break
-                if i == len(x) - 1:
-                    allClear = True
-
-    removeIndex()
+    print('Insira os valores abaixo, separados por um espaço\n')
+    x = list(map(float, input().rstrip().split()))
 
     def media(values):
         return sum(values) / len(values)
